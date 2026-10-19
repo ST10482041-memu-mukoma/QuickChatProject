@@ -1,5 +1,6 @@
  // part 2 application.
  // StudentName:Memu Mukoma
+ // This is the main entry point 
  import java.util.Scanner;
 
 public class QuickChat {
