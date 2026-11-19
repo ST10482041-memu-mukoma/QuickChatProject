@@ -1,4 +1,4 @@
-// Added JSON file reading Logic
+// Implemented stored messages menu
 import java.util.Scanner;
 
 public class QuickChat {
