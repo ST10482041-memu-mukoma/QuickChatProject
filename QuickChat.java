@@ -1,4 +1,4 @@
-// QuickChat main application setup
+// Added parallel arrays for the messages
 import java.util.Scanner;
 
 public class QuickChat {
