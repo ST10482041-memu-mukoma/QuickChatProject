@@ -1,4 +1,4 @@
-// Added parallel arrays for the messages
+// Added JSON file reading Logic
 import java.util.Scanner;
 
 public class QuickChat {
