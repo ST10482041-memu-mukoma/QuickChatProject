@@ -1,3 +1,4 @@
+// Part 1
 import java.util.Scanner;
 
 public class QuickChat {
@@ -112,80 +113,7 @@ public class QuickChat {
                     running = false;
                     break;
                     
-                                case 4:
-                    System.out.println("\n--- View Stored Messages ---");
-                    System.out.println("a - Show sender and recipient");
-                    System.out.println("b - Find the longest message");
-                    System.out.println("c - Search by message ID");
-                    System.out.println("d - Search by recipient number");
-                    System.out.println("e - Delete a message by hash");
-                    System.out.println("f - Print full report");
-                    System.out.print("Select an option: ");
-                    String menuChoice = scanner.nextLine().toLowerCase();
-
-                    if (menuChoice.equals("a")) {
-                        for (int i = 0; i < arrayIndex; i++) {
-                            if (storedMessages[i] != null) {
-                                System.out.println("To: " + recipients[i] + " | Message: " + storedMessages[i]);
-                            }
-                        }
-                    } 
-                    else if (menuChoice.equals("b")) {
-                        String maxLengthMsg = "";
-                        for (int i = 0; i < arrayIndex; i++) {
-                            if (storedMessages[i] != null && storedMessages[i].length() > maxLengthMsg.length()) {
-                                maxLengthMsg = storedMessages[i];
-                            }
-                        }
-                        System.out.println("The longest message is: " + maxLengthMsg);
-                    } 
-                    else if (menuChoice.equals("c")) {
-                        System.out.print("Enter the Message ID: ");
-                        String searchID = scanner.nextLine();
-                        boolean found = false;
-                        for (int i = 0; i < arrayIndex; i++) {
-                            if (messageIDs[i] != null && messageIDs[i].equals(searchID)) {
-                                System.out.println("Recipient: " + recipients[i] + " | Message: " + storedMessages[i]);
-                                found = true;
-                            }
-                        }
-                        if (!found) System.out.println("No message found with that ID.");
-                    } 
-                    else if (menuChoice.equals("d")) {
-                        System.out.print("Enter recipient number: ");
-                        String searchNum = scanner.nextLine();
-                        for (int i = 0; i < arrayIndex; i++) {
-                            if (recipients[i] != null && recipients[i].equals(searchNum)) {
-                                System.out.println("Found message: " + storedMessages[i]);
-                            }
-                        }
-                    } 
-                    else if (menuChoice.equals("e")) {
-                        System.out.print("Enter the message hash to delete: ");
-                        String hashToDelete = scanner.nextLine();
-                        for (int i = 0; i < arrayIndex; i++) {
-                            if (messageHashes[i] != null && messageHashes[i].equals(hashToDelete)) {
-                                storedMessages[i] = null; 
-                                System.out.println("Message deleted successfully.");
-                            }
-                        }
-                    } 
-                    else if (menuChoice.equals("f")) {
-                        System.out.println("\n--- Full Message Report ---");
-                        for (int i = 0; i < arrayIndex; i++) {
-                            if (storedMessages[i] != null) {
-                                System.out.println("Message ID: " + messageIDs[i]);
-                                System.out.println("Hash: " + messageHashes[i]);
-                                System.out.println("To: " + recipients[i]);
-                                System.out.println("Text: " + storedMessages[i]);
-                                System.out.println("-----------------------------");
-                            }
-                        }
-                    } 
-                    else {
-                        System.out.println("Invalid choice.");
-                    }
-                    break;
+                
 
                 default:
                     System.out.println("Invalid option. Try again.");
