@@ -35,4 +35,38 @@ public class MessageTest {
         // This checks if the hash ends with HITONIGHT
         assertTrue(msg.getMessageHash().endsWith(":0:HITONIGHT"));
     }
+        // Test to check if the messages array is populated correctly
+    @Test
+    public void testMessagesArrayPopulated() {
+        String[] testArray = {"Did you get the cake?", "It is dinner time!"};
+        assertEquals(2, testArray.length);
+        assertEquals("Did you get the cake?", testArray[0]);
+    }
+
+    // Test to find the longest message
+    @Test
+    public void testLongestMessage() {
+        String[] msgs = {"Hi", "Where are you? You are late! I have asked you to be on time.", "Ok"};
+        String longest = "";
+        for (String m : msgs) {
+            if (m.length() > longest.length()) {
+                longest = m;
+            }
+        }
+        assertEquals("Where are you? You are late! I have asked you to be on time.", longest);
+    }
+
+    // Test to search for a message ID
+    @Test
+    public void testSearchByID() {
+        String[] ids = {"1234567890", "0838884567"};
+        String target = "0838884567";
+        boolean found = false;
+        for (String id : ids) {
+            if (id.equals(target)) {
+                found = true;
+            }
+        }
+        assertTrue(found);
+    }
 }

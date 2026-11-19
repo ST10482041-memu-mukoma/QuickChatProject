@@ -1,5 +1,5 @@
  // Message Class
- // Handles message logic and hashing
+ // This class does the message stuff and creates hashes
  import java.util.Random;
 import java.util.ArrayList;
 
