@@ -1,4 +1,4 @@
-// Part 1
+// QuickChat main application setup
 import java.util.Scanner;
 
 public class QuickChat {
